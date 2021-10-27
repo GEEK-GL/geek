@@ -3,13 +3,14 @@ use crate::{
 	cli::{Cli, Subcommand},
 	service,
 };
-use node_template_runtime::Block;
+use geek_runtime::Block;
 use sc_cli::{ChainSpec, Role, RuntimeVersion, SubstrateCli};
 use sc_service::PartialComponents;
 
 impl SubstrateCli for Cli {
 	fn impl_name() -> String {
-		"Substrate Node".into()
+		//"Substrate Node".into()
+		"GEEK".into()
 	}
 
 	fn impl_version() -> String {
@@ -42,7 +43,7 @@ impl SubstrateCli for Cli {
 	}
 
 	fn native_runtime_version(_: &Box<dyn ChainSpec>) -> &'static RuntimeVersion {
-		&node_template_runtime::VERSION
+		&geek_runtime::VERSION
 	}
 }
 
